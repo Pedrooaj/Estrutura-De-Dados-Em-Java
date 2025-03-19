@@ -17,7 +17,7 @@ public class Lista_Dinamica {
 
     public void add(int value){
         Nodo<Integer> newNodo = new Nodo<Integer>(value);
-        if(length == 0){
+        if(isEmpty()){
             this.start = newNodo;
             this.end = newNodo;
         }else{
