@@ -2,6 +2,7 @@ import Estruturas.Lista_Dinamica;
 // import Estruturas.Lista_Estatica;
 
 public class App {
+    // test
     public static void main(String[] args) throws Exception {
     //    Lista_Estatica list = new Lista_Estatica(5);
     //    list.add("1");
@@ -16,10 +17,14 @@ public class App {
     Lista_Dinamica list = new Lista_Dinamica();
 
 
-    for(int i = 0; i <= 10;i++){
+    for(int i = 0; i < 10;i++){
         list.add(i);
     }
-    list.printList();
+
+    list.insertPosition(6, 10);
+    list.removePosition(0);
     
+    list.printList();
+    System.out.println(list.length);
     }
 }
