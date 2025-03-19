@@ -17,14 +17,32 @@ public class Lista_Estatica {
         }
     }
 
-    public void insert(String value, int position) {
+
+    public void removePosition(int position){
         if(position < 0 || position > length){
-            System.out.println("Posição inválida/Lista cheia");
+            System.out.println("Posição inválida");
             return;
         }
 
-        if (position == 0) {
-            addStart(value);
+        if (length == 0) {
+            System.out.println("Lista vazia...");
+            return;
+        }
+        
+        for(int i = position; i < length - 1;i++){
+            vetor[i] = vetor[i + 1];
+        }
+        length--;
+    }
+
+    public void insert(String value, int position) {
+        if(position < 0 || position > length){
+            System.out.println("Posição inválida");
+            return;
+        }
+
+        if(length == capacity){
+            System.out.println("Lista cheia");
             return;
         }
 
@@ -72,6 +90,8 @@ public class Lista_Estatica {
         for (int i = 0; i < length; i++) {
             System.out.print(vetor[i] + " ");
         }
+
+        System.out.println();
 
     }
 

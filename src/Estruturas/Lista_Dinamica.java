@@ -103,7 +103,7 @@ public class Lista_Dinamica {
         }
     }
 
-    public void insertPosition(int position, int value) {
+    public void insertPosition(int value, int position) {
 
         if (position > length || position < 0) {
             System.out.println("Posição invalida");
